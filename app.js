@@ -1,9 +1,4 @@
-// Configuration - Fill in your credentials here
-const CONFIG = {
-  GITHUB_TOKEN: 'YOUR_GITHUB_TOKEN',
-  SUPABASE_URL: 'https://dyjyrsyyorqmqtigzocw.supabase.co',
-  SUPABASE_KEY: 'YOUR_SUPABASE_KEY'
-};
+// Config is loaded from config.js (see config.example.js — copy it, rename to config.js, and fill in your credentials)
 
 // Utility: Format date to relative time (e.g., "2 days ago")
 function formatRelativeDate(dateString) {

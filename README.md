@@ -13,46 +13,25 @@ A personal dashboard showing live GitHub PRs, active projects, and pending tasks
 
 ## Setup
 
-### 1. Clone the repo
-```bash
-git clone https://github.com/beerberidie/garason-dashboard.git
-cd garason-dashboard
-```
+1. Clone the repo
+   ```bash
+   git clone https://github.com/beerberidie/garason-dashboard.git
+   cd garason-dashboard
+   ```
 
-### 2. Add your credentials
-Open `app.js` and fill in the configuration object at the top:
+2. Copy `config.example.js` to `config.js`
+   ```bash
+   cp config.example.js config.js
+   ```
 
-```javascript
-const CONFIG = {
-  GITHUB_TOKEN: 'ghp_xxxxxxxxxxxx',  // GitHub Personal Access Token
-  SUPABASE_URL: 'https://dyjyrsyyorqmqtigzocw.supabase.co',  // Your Supabase project URL
-  SUPABASE_KEY: 'your_supabase_anon_key'  // Supabase anon key
-};
-```
+3. Fill in your credentials in `config.js`
+   - `GITHUB_TOKEN`: Your GitHub Personal Access Token
+   - `SUPABASE_URL`: Your Supabase project URL (already filled in)
+   - `SUPABASE_KEY`: Your Supabase anon/public key
 
-### 3. Get your credentials
+4. Open `index.html` in your browser or deploy to GitHub Pages
 
-**GitHub Token:**
-1. Go to [GitHub Settings → Developer Settings → Personal Access Tokens](https://github.com/settings/tokens)
-2. Generate a new token with `repo` scope (read access)
-3. Copy the token and paste it into `CONFIG.GITHUB_TOKEN`
-
-**Supabase Key:**
-1. Open your Supabase project at [https://app.supabase.com](https://app.supabase.com)
-2. Go to Settings → API
-3. Copy your **anon/public** key and paste it into `CONFIG.SUPABASE_KEY`
-
-### 4. Run it
-Just open `index.html` in your browser — no build step needed.
-
-```bash
-# Option 1: Open directly in browser
-open index.html
-
-# Option 2: Use a local server (for CORS if needed)
-python3 -m http.server 8000
-# Then visit http://localhost:8000
-```
+**Note:** `config.js` is gitignored and will never be committed
 
 ## Data Sources
 
