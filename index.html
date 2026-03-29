@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garason Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🚀 Garason Dashboard</h1>
+      <p class="subtitle">GitHub PRs • Active Projects • Pending Tasks</p>
+    </header>
+
+    <div class="panels-grid">
+      <!-- Panel 1: GitHub PRs -->
+      <div class="panel">
+        <div class="panel-header">
+          <h2>📝 Open PRs</h2>
+          <span class="panel-meta" id="prs-count">(loading)</span>
+        </div>
+        <div class="panel-content" id="prs-content">
+          <div class="loading">Loading PRs...</div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Active Projects -->
+      <div class="panel">
+        <div class="panel-header">
+          <h2>📊 Active Projects</h2>
+          <span class="panel-meta" id="projects-count">(loading)</span>
+        </div>
+        <div class="panel-content" id="projects-content">
+          <div class="loading">Loading projects...</div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Pending Tasks -->
+      <div class="panel">
+        <div class="panel-header">
+          <h2>✓ Pending Tasks</h2>
+          <span class="panel-meta" id="tasks-count">(loading)</span>
+        </div>
+        <div class="panel-content" id="tasks-content">
+          <div class="loading">Loading tasks...</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Last updated: <span id="last-updated">just now</span></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
